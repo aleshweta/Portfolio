@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+
+.aboutMe-section {
+  background-color: white;
+  font-family: 'Benne', serif;
+}
+.short-bio {
+  display: flex;
+  margin-bottom: 30px;
+}
+.short-bio > * {
+  text-align: center;
+  flex: 1;
+  line-height: 1.2;
+}
+.short-bio-text {
+  padding: 100px 30px;
+} 
+.short-bio-text > h1 {
+  background-image: url(./brushstrokeP.png);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 50px;
+  height: 180px;
+  padding: 80px;
+}
+.short-bio-text > p {
+  font-size: 20px;
+}
+.short-bio-img {
+  padding-top: 40px;
+  max-width: 100%;
+}
+.dev-icons {
+  font-size: 2.5rem;
+  margin-top: 10%; 
+}
+/* selects all elements except p */
+.dev-icons > * :not(p){
+  color: #868e96;
+  margin: 5px;
+}
+.dev-icons-subTitle {
+  font-size: 20px;
+}

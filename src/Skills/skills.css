@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');
+
+.skills-section {
+  background: white;
+  width: 80%;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+.skills-title {
+  background-image: url(./brushStroke.png);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 50px;
+  height: 180px;
+  width: 700px;
+  padding: 80px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Benne', serif;
+}
+.progress-bar {
+  overflow: visible;
+}
+
+.progress-bar.web span {
+  width: 80%;
+}
+
+.progress-bar.java span {
+  width: 60%;
+}
+
+.progress-bar.python span {
+  width: 40%;
+}
+
+.progress-bar.cplusplus span {
+  width: 30%;
+}
+
+.skills {
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+
+.skills-section .bar:first-child {
+  margin-top: 0px;
+}
+
+.info {
+  margin-bottom: 10px;
+}
+
+.skills-section .bar {
+  margin: 20px;
+}
+
+.skills-section .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.skills-section .bar .progress-bar {
+  height: 13px;
+  border-radius: 10px;
+  width: 100%;
+  transform: scaleX(0);
+  position: relative;
+  transform-origin: left;
+  background: lightgray;
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.progress-bar span {
+  height: 100%;
+  background: #00afb9;
+  border-radius: 10px;
+  position: absolute;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.bar .progress-bar span::before {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: black;
+  background: black;
+}
+
+.bar .progress-bar span::after {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  color: white;
+  font-size: 12px;
+  background: black;
+  font-weight: 500;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+.bar .progress-bar.web span::after {
+  content: "80%";
+}
+
+.bar .progress-bar.java span::after {
+  content: "60%";
+}
+
+.bar .progress-bar.python span::after {
+  content: "40%";
+}
+
+.bar .progress-bar.cplusplus span::after {
+  content: "30%";
+}
